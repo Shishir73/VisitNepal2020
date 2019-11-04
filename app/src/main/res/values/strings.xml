@@ -1,0 +1,21 @@
+<resources>
+
+    <string name="app_name">Visit Nepal 2020</string>
+    <string name="welcome">Welcome</string>
+    <string name="menu_item1">Dark Mode</string>
+    <string name="menu_item2">Settings</string>
+    <string name="menu_item3">References</string>
+
+    <string name="menu_nav1">Explore City</string>
+    <string name="menu_nav2">Foods</string>
+    <string name="menu_nav3">Share</string>
+    <string name="menu_nav4">Suggestions</string>
+
+    <string name="nav_drawer_open">Open Navigation Drawer</string>
+    <string name="nav_drawer_close">Close Navigation Drawer</string>
+
+    <string name="main_button1">Explore Cities</string>
+    <string name="main_button2">Famous Foods</string>
+
+
+</resources>

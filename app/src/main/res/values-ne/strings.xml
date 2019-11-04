@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">नेपाल भ्रमण गर्नुहोस्</string>
+    <string name="menu_item2">सेटिंग्स</string>
+    <string name="menu_item3">सन्दर्भ</string>
+    <string name="menu_nav1">शहरहरू अन्वेषण गर्नुहोस्</string>
+    <string name="menu_nav2">खाना</string>
+    <string name="menu_item1">अँध्यारो मोड</string>
+    <string name="menu_nav3">सेयर</string>
+    <string name="menu_nav4">सुझावहरू</string>
+    <string name="nav_drawer_open">नेभिगेसन ड्रयर खोल्नुहोस्</string>
+    <string name="nav_drawer_close">नेभिगेसन ड्रयर बन्द गर्नुहोस्</string>
+    <string name="welcome">स्वागतम्</string>
+    <string name="main_button1">शहरहरू अन्वेषण गर्नुहोस्</string>
+    <string name="main_button2">प्रसिद्ध खाना</string>
+</resources>

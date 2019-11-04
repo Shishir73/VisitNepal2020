@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_explore"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_nav1" />
+        <item
+            android:id="@+id/nav_food"
+            android:icon="@drawable/ic_image"
+            android:title="@string/menu_nav2" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_share_24dp"
+                android:title="@string/menu_nav3" />
+            <item
+                android:id="@+id/nav_suggest"
+                android:icon="@drawable/ic_sugest_24dp"
+                android:title="@string/menu_nav4" />
+        </menu>
+    </item>
+</menu>

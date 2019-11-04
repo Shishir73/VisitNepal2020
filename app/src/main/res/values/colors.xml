@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name = "maroon">#800000</color>
+    <color name="red">#FE2E2E</color>
+    <color name="redFarrari">#E62600</color>
+    <color name="redDark">#610B0B</color>
+
+    <color name="orange">#FE9A2E</color>
+
+    <color name = "white">#FFFFFF</color>
+    <color name = "black">#000000</color>
+    <color name = "brown">#964B00</color>
+
+    <color name = "blue">#1919FF</color>
+
+    <color name = "grey">#FF888888</color>
+    <color name="darkGrey">#6E6E6E</color>
+
+    <color name="yellow">#F3F781</color>
+
+    <color name="green">#3ADF00</color>
+    <color name="greenAmazon">#3B7A57</color>
+
+</resources>
