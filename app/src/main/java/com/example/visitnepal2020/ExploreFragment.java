@@ -25,21 +25,23 @@ import java.util.List;
 public class ExploreFragment extends Fragment {
 
     private static final int NUM_COLUMNS = 2;
-    private RecyclerView _cityList;
+    private RecyclerView _cityView;
     private CityViewModel cityViewModel;
-//    private FloatingActionButton buttonAddCity;
+    private CityAdapter cityAdapter;
+    //    private FloatingActionButton buttonAddCity;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_explore, container, false);
-        CityAdapter adapter = new CityAdapter();
+        cityAdapter = new CityAdapter();
 
-        _cityList = v.findViewById(R.id.rv);
-        _cityList.setHasFixedSize(true);
+        _cityView = v.findViewById(R.id.rv);
         StaggeredGridLayoutManager sglm = new StaggeredGridLayoutManager(NUM_COLUMNS, LinearLayout.VERTICAL);
-        _cityList.setLayoutManager(sglm);
-        _cityList.setAdapter(adapter);
+        _cityView.setLayoutManager(sglm);
+        _cityView.hasFixedSize();
+
+        _cityView.setAdapter(cityAdapter);
 
 
         //region FLOATING BUTTON
@@ -57,8 +59,7 @@ public class ExploreFragment extends Fragment {
         cityViewModel.getAllCities().observe(this, new Observer<List<City>>() {
             @Override
             public void onChanged(List<City> cities) {
-                Toast.makeText(ExploreFragment.this.getContext(), "loaded", Toast.LENGTH_LONG).show();
-//                adapter.insert_cities(cities);
+                cityAdapter.insertCities(cities);
             }
         });
         return v;
