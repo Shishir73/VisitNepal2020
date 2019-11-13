@@ -5,9 +5,9 @@ import androidx.room.PrimaryKey;
 
 @Entity(tableName = "city_table")
 public class City {
-
     @PrimaryKey(autoGenerate = true)
     private int id;
+
     private String name;
     private String image;
 
@@ -18,6 +18,10 @@ public class City {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public String getName() {

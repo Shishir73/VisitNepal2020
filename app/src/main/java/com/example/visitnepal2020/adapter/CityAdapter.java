@@ -1,8 +1,10 @@
 package com.example.visitnepal2020.adapter;
 
 import android.content.Context;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,22 +16,14 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.visitnepal2020.R;
 import com.example.visitnepal2020.Database.City;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
 
-    private ArrayList<City> _cities;
-    final private OnListItemClickListener _OnListItemClickListener;
+    private List<City> _cities = new ArrayList<>();
     private Context context;
-
-
-    public CityAdapter(ArrayList<City> cities, OnListItemClickListener listener, Context context) {
-        _cities = cities;
-        _OnListItemClickListener = listener;
-        this.context = context;
-    }
 
     @NonNull
     @Override
@@ -46,12 +40,9 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
         RequestOptions requestOptions = new RequestOptions().placeholder(R.drawable.ic_launcher_background);
 
         viewHolder.name.setText(_cities.get(i).getName());
-        Picasso.get().load(_cities.get(i).getImage()).into(viewHolder.image);
-//        Glide.with(context).load(_cities.get(i).getImage())
-//                .apply(requestOptions)
-//                .into(viewHolder.image);
-
-//        viewHolder.image.setImageURI(_cities.get(i).getImage());
+        Glide.with(context).load(_cities.get(i).getImage())
+                .apply(requestOptions)
+                .into(viewHolder.image);
     }
 
     @Override
@@ -59,8 +50,12 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
         return _cities.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public void insert_cities(List<City> cities) {
+        this._cities = cities;
+        notifyDataSetChanged();
+    }
 
+    class ViewHolder extends RecyclerView.ViewHolder {
         TextView name;
         ImageView image;
 
@@ -68,16 +63,6 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.ViewHolder> {
             super(itemView);
             name = itemView.findViewById(R.id.tv2);
             image = itemView.findViewById(R.id.bktp);
-            itemView.setOnClickListener(this);
-
         }
-
-        public void onClick(View v) {
-            _OnListItemClickListener.onListItemClick(getAdapterPosition());
-        }
-    }
-
-    public interface OnListItemClickListener {
-        void onListItemClick(int clickedItemIndex);
     }
 }
