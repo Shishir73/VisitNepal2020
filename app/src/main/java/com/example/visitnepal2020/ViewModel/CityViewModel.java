@@ -1,6 +1,9 @@
-package com.example.visitnepal2020;
+package com.example.visitnepal2020.ViewModel;
 
 import android.app.Application;
+
+import com.example.visitnepal2020.Repository.CityRepository;
+import com.example.visitnepal2020.Database.City;
 
 import java.util.List;
 

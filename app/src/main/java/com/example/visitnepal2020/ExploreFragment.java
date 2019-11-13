@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.visitnepal2020.Database.City;
+import com.example.visitnepal2020.ViewModel.CityViewModel;
 import com.example.visitnepal2020.adapter.CityAdapter;
 
 import java.util.List;

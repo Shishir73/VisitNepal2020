@@ -1,7 +1,11 @@
-package com.example.visitnepal2020;
+package com.example.visitnepal2020.Repository;
 
 import android.app.Application;
 import android.os.AsyncTask;
+
+import com.example.visitnepal2020.Database.City;
+import com.example.visitnepal2020.Database.CityDao;
+import com.example.visitnepal2020.Database.CityDatabase;
 
 import java.util.List;
 
