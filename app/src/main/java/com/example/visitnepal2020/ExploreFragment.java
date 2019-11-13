@@ -1,4 +1,4 @@
-package com.example.visitnepal2020.NavBar;
+package com.example.visitnepal2020;
 
 import android.os.Bundle;
 
@@ -16,13 +16,8 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.example.visitnepal2020.R;
-import com.example.visitnepal2020.ViewModel.CityViewModel;
 import com.example.visitnepal2020.adapter.CityAdapter;
-import com.example.visitnepal2020.Database.City;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ExploreFragment extends Fragment {

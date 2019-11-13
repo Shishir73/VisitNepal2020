@@ -1,13 +1,8 @@
-package com.example.visitnepal2020.Repository;
+package com.example.visitnepal2020;
 
 import android.app.Application;
 import android.os.AsyncTask;
 
-import com.example.visitnepal2020.Database.City;
-import com.example.visitnepal2020.Database.CityDao;
-import com.example.visitnepal2020.Database.CityDatabase;
-
-import java.util.ArrayList;
 import java.util.List;
 
 import androidx.lifecycle.LiveData;
@@ -17,7 +12,7 @@ public class CityRepository {
     private static CityRepository instance;
     private LiveData<List<City>> allCities;
 
-    public CityRepository(Application application) {
+    private CityRepository(Application application) {
         CityDatabase database = CityDatabase.getInstance(application);
         cityDao = database.cityDao();
         allCities = cityDao.getAllCities();

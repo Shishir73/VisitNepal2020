@@ -1,4 +1,4 @@
-package com.example.visitnepal2020.NavBar;
+package com.example.visitnepal2020;
 
 import android.os.Bundle;
 import androidx.annotation.NonNull;

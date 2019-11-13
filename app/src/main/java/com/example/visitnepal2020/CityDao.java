@@ -1,6 +1,7 @@
-package com.example.visitnepal2020.Database;
+package com.example.visitnepal2020;
 
-import java.util.ArrayList;
+import com.example.visitnepal2020.City;
+
 import java.util.List;
 
 import androidx.lifecycle.LiveData;

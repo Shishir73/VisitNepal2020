@@ -14,9 +14,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.visitnepal2020.NavBar.ExploreFragment;
-import com.example.visitnepal2020.NavBar.FoodFragment;
-
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private boolean isColored = true;

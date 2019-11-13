@@ -1,4 +1,4 @@
-package com.example.visitnepal2020.Database;
+package com.example.visitnepal2020;
 
 import android.content.Context;
 import android.os.AsyncTask;

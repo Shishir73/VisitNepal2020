@@ -15,7 +15,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
 import com.example.visitnepal2020.R;
-import com.example.visitnepal2020.Database.City;
+import com.example.visitnepal2020.City;
 
 import java.util.ArrayList;
 import java.util.List;
