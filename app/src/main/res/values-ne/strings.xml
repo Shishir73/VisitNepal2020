@@ -14,4 +14,5 @@
     <string name="main_button1">शहरहरू अन्वेषण गर्नुहोस्</string>
     <string name="main_button2">प्रसिद्ध खाना</string>
     <string name="search_button">गतिविधि खोज्नुहोस्</string>
+    <string name="suggestion_textview">सुझाव दिनको लागि साइन-इन गर्नुहोस्।</string>
 </resources>

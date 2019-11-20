@@ -17,4 +17,7 @@
     <string name="main_button1">Explore Cities</string>
     <string name="main_button2">Famous Foods</string>
     <string name="search_button">Search Activity</string>
+
+    <string name="suggestion_textview">Sign-in to suggest.</string>
+
 </resources>
