@@ -29,7 +29,6 @@ import androidx.fragment.app.Fragment;
 public class SuggestionFragment extends Fragment {
 
     GoogleSignInClient googleSignInClient;
-    FirebaseAuth mAuth;
     SignInButton signIn;
     View v;
     int RC_SIGN_IN = 0;
@@ -45,7 +44,6 @@ public class SuggestionFragment extends Fragment {
                 .build();
 
         googleSignInClient = GoogleSignIn.getClient(v.getContext(), gso);
-        mAuth = FirebaseAuth.getInstance();
 
         signIn = v.findViewById(R.id.signInButton);
         signIn.setOnClickListener(new View.OnClickListener() {
@@ -58,7 +56,6 @@ public class SuggestionFragment extends Fragment {
                 }
             }
         });
-        mAuth = FirebaseAuth.getInstance();
 
         return v;
     }
@@ -89,14 +86,14 @@ public class SuggestionFragment extends Fragment {
         Log.d("MAIN_ACTIVITY : ", "firebaseAuthWithGoogle:" + acct.getId());
 
         AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
-        mAuth.signInWithCredential(credential)
+        MainActivity.mAuth.signInWithCredential(credential)
                 .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("MAIN_ACTIVITY : ", "signInWithCredential:success");
-                            FirebaseUser user = mAuth.getCurrentUser();
+                            FirebaseUser user = MainActivity.mAuth.getCurrentUser();
                             Intent intent = new Intent(v.getContext(), LoggedInActivity.class);
                             startActivity(intent);
                         } else {
@@ -113,6 +110,6 @@ public class SuggestionFragment extends Fragment {
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        FirebaseUser currentUser = MainActivity.mAuth.getCurrentUser();
     }
 }
