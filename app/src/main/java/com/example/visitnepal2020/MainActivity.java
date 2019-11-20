@@ -84,7 +84,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FoodFragment()).commit();
                 break;
             case R.id.nav_share:
-                Toast.makeText(this, "SHARE", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "SHARE", Toast.LENGTH_SHORT).show();
+                Intent myIntent = new Intent(Intent.ACTION_SEND);
+                myIntent.setType("text/plain");
+                String shareBody = "VISIT NEPAL 2020.";
+                myIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(myIntent, "SHARE USING"));
                 break;
             case R.id.nav_suggest:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SuggestionFragment()).commit();
