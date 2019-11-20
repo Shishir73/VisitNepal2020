@@ -1,6 +1,8 @@
 package com.example.visitnepal2020;
 
 import androidx.annotation.NonNull;
+
+import com.example.visitnepal2020.ViewModel.Viewmodel;
 import com.google.android.material.navigation.NavigationView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -12,6 +14,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -46,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         //endregion
+
     }
 
     @Override
@@ -84,4 +88,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         inflater.inflate(R.menu.front_menu, menu);
         return true;
     }
+
 }

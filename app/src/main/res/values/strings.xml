@@ -7,7 +7,7 @@
     <string name="menu_item3">References</string>
 
     <string name="menu_nav1">Explore City</string>
-    <string name="menu_nav2">Foods</string>
+    <string name="menu_nav2">Things To Do</string>
     <string name="menu_nav3">Share</string>
     <string name="menu_nav4">Suggestions</string>
 
@@ -16,6 +16,5 @@
 
     <string name="main_button1">Explore Cities</string>
     <string name="main_button2">Famous Foods</string>
-
-
+    <string name="search_button">Search Activity</string>
 </resources>

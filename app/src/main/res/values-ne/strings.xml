@@ -4,7 +4,7 @@
     <string name="menu_item2">सेटिंग्स</string>
     <string name="menu_item3">सन्दर्भ</string>
     <string name="menu_nav1">शहरहरू अन्वेषण गर्नुहोस्</string>
-    <string name="menu_nav2">खाना</string>
+    <string name="menu_nav2">गर्नुपर्ने कामहरू</string>
     <string name="menu_item1">अँध्यारो मोड</string>
     <string name="menu_nav3">सेयर</string>
     <string name="menu_nav4">सुझावहरू</string>
@@ -13,4 +13,5 @@
     <string name="welcome">स्वागतम्</string>
     <string name="main_button1">शहरहरू अन्वेषण गर्नुहोस्</string>
     <string name="main_button2">प्रसिद्ध खाना</string>
+    <string name="search_button">गतिविधि खोज्नुहोस्</string>
 </resources>

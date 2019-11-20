@@ -14,10 +14,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import android.widget.Toast;
 
 import com.example.visitnepal2020.Database.City;
-import com.example.visitnepal2020.ViewModel.CityViewModel;
+import com.example.visitnepal2020.ViewModel.Viewmodel;
 import com.example.visitnepal2020.adapter.CityAdapter;
 
 import java.util.List;
@@ -26,7 +25,7 @@ public class ExploreFragment extends Fragment {
 
     private static final int NUM_COLUMNS = 2;
     private RecyclerView _cityView;
-    private CityViewModel cityViewModel;
+    private Viewmodel viewmodel;
     private CityAdapter cityAdapter;
     //    private FloatingActionButton buttonAddCity;
 
@@ -55,8 +54,8 @@ public class ExploreFragment extends Fragment {
 
         //endregion
 
-        cityViewModel = ViewModelProviders.of(this).get(CityViewModel.class);
-        cityViewModel.getAllCities().observe(this, new Observer<List<City>>() {
+        viewmodel = ViewModelProviders.of(this).get(Viewmodel.class);
+        viewmodel.getAllCities().observe(this, new Observer<List<City>>() {
             @Override
             public void onChanged(List<City> cities) {
                 cityAdapter.insertCities(cities);

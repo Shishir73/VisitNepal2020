@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Besøg Nepal 2020</string>
-    <string name="menu_nav2">Fødevarer</string>
     <string name="menu_nav1">Udforsk Byer</string>
     <string name="menu_item3">Referencer</string>
     <string name="menu_item1">Mørk Tilstand</string>
@@ -13,4 +12,6 @@
     <string name="welcome">Hej</string>
     <string name="main_button1">Udforsk Byer</string>
     <string name="main_button2">Berømte Madvarer</string>
+    <string name="search_button">Søgeaktivitet</string>
+    <string name="menu_nav2">Ting at gøre</string>
 </resources>
