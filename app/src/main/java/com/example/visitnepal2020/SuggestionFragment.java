@@ -100,7 +100,6 @@ public class SuggestionFragment extends Fragment {
                             // If sign in fails, display a message to the user.
                             Log.w("MAIN_ACTIVITY : ", "signInWithCredential:failure", task.getException());
                             Snackbar.make(v.findViewById(R.id.fragment_suggest), "Authentication Failed.", Snackbar.LENGTH_SHORT).show();
-
                         }
                     }
                 });

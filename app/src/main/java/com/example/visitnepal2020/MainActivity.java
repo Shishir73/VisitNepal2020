@@ -18,11 +18,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -45,7 +47,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //region FIREBASE AUTHORIZATION
         mAuth = FirebaseAuth.getInstance();
+        //endregion
 
         //region NAVIGATION
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -71,7 +76,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         //endregion
 
-
     }
 
     @Override
@@ -84,7 +88,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FoodFragment()).commit();
                 break;
             case R.id.nav_share:
-//                Toast.makeText(this, "SHARE", Toast.LENGTH_SHORT).show();
                 Intent myIntent = new Intent(Intent.ACTION_SEND);
                 myIntent.setType("text/plain");
                 String shareBody = "VISIT NEPAL 2020.";
@@ -116,4 +119,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.item2:
+                Toast.makeText(this, "Setting Selected", Toast.LENGTH_SHORT).show();
+            case R.id.item3:
+                Toast.makeText(this, "Reference Selected", Toast.LENGTH_SHORT).show();
+
+        }
+        return super.onOptionsItemSelected(item);
+    }
 }
